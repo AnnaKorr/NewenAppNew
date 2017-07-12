@@ -13,6 +13,9 @@
 		18484F381F15018F0053C350 /* NewenApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18484F361F15018F0053C350 /* NewenApp.xcdatamodeld */; };
 		18484F3A1F15018F0053C350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18484F391F15018F0053C350 /* Assets.xcassets */; };
 		18484F3D1F15018F0053C350 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18484F3B1F15018F0053C350 /* LaunchScreen.storyboard */; };
+		187050681F1509440077CA48 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187050671F1509440077CA48 /* NewsTableViewController.swift */; };
+		1870506A1F150EC70077CA48 /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187050691F150EC70077CA48 /* NewsList.swift */; };
+		98A6F7543911A2D2AA288BB7 /* Pods_NewenApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FE84960EF3AE3C91693B6C /* Pods_NewenApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,11 @@
 		18484F391F15018F0053C350 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18484F3C1F15018F0053C350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18484F3E1F15018F0053C350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187050671F1509440077CA48 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		187050691F150EC70077CA48 /* NewsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsList.swift; sourceTree = "<group>"; };
+		2DD6E02143BBD98F5CC6ABFA /* Pods-NewenApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewenApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewenApp/Pods-NewenApp.release.xcconfig"; sourceTree = "<group>"; };
+		81FE84960EF3AE3C91693B6C /* Pods_NewenApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewenApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3B8F06542F257C0AFE00B75 /* Pods-NewenApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewenApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewenApp/Pods-NewenApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98A6F7543911A2D2AA288BB7 /* Pods_NewenApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				18484F2E1F15018F0053C350 /* NewenApp */,
 				18484F2D1F15018F0053C350 /* Products */,
+				CE4B28EA3B2FEDF39E88FA4B /* Pods */,
+				45F83265FE966C3C8DC79F2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +67,34 @@
 		18484F2E1F15018F0053C350 /* NewenApp */ = {
 			isa = PBXGroup;
 			children = (
-				18484F2F1F15018F0053C350 /* AppDelegate.swift */,
 				18484F311F15018F0053C350 /* ViewController.swift */,
+				187050671F1509440077CA48 /* NewsTableViewController.swift */,
+				187050691F150EC70077CA48 /* NewsList.swift */,
 				18484F331F15018F0053C350 /* Main.storyboard */,
 				18484F391F15018F0053C350 /* Assets.xcassets */,
 				18484F3B1F15018F0053C350 /* LaunchScreen.storyboard */,
+				18484F2F1F15018F0053C350 /* AppDelegate.swift */,
 				18484F3E1F15018F0053C350 /* Info.plist */,
 				18484F361F15018F0053C350 /* NewenApp.xcdatamodeld */,
 			);
 			path = NewenApp;
+			sourceTree = "<group>";
+		};
+		45F83265FE966C3C8DC79F2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81FE84960EF3AE3C91693B6C /* Pods_NewenApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE4B28EA3B2FEDF39E88FA4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3B8F06542F257C0AFE00B75 /* Pods-NewenApp.debug.xcconfig */,
+				2DD6E02143BBD98F5CC6ABFA /* Pods-NewenApp.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18484F411F15018F0053C350 /* Build configuration list for PBXNativeTarget "NewenApp" */;
 			buildPhases = (
+				18DD77901AD4C02C7F8BD38E /* [CP] Check Pods Manifest.lock */,
 				18484F281F15018F0053C350 /* Sources */,
 				18484F291F15018F0053C350 /* Frameworks */,
 				18484F2A1F15018F0053C350 /* Resources */,
+				E9A4A188FF588D3AC6803A2F /* [CP] Embed Pods Frameworks */,
+				FF24483D5B8196B270AB6B79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,11 +167,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18DD77901AD4C02C7F8BD38E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E9A4A188FF588D3AC6803A2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewenApp/Pods-NewenApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF24483D5B8196B270AB6B79 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewenApp/Pods-NewenApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18484F281F15018F0053C350 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187050681F1509440077CA48 /* NewsTableViewController.swift in Sources */,
+				1870506A1F150EC70077CA48 /* NewsList.swift in Sources */,
 				18484F321F15018F0053C350 /* ViewController.swift in Sources */,
 				18484F381F15018F0053C350 /* NewenApp.xcdatamodeld in Sources */,
 				18484F301F15018F0053C350 /* AppDelegate.swift in Sources */,
@@ -264,6 +347,7 @@
 		};
 		18484F421F15018F0053C350 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3B8F06542F257C0AFE00B75 /* Pods-NewenApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NewenApp/Info.plist;
@@ -276,6 +360,7 @@
 		};
 		18484F431F15018F0053C350 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DD6E02143BBD98F5CC6ABFA /* Pods-NewenApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NewenApp/Info.plist;
@@ -305,6 +390,7 @@
 				18484F431F15018F0053C350 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
